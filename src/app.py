@@ -42,7 +42,7 @@ def handle_add():
     if 'lucky_numbers' in member and "age" in member and "first_name" in member:
         jackson_family.add_member(member)
         if jackson_family.get_member(member_id) is not None:
-            return jsonify(), 200
+            return jsonify("Family member added"), 200
 
 @app.route('/member/<int:id>', methods=['GET'])
 def handle_one(id):
